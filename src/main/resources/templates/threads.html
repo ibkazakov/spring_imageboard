@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/one-thread.css}">
+
+    <meta name="ctx" th:content="${#httpServletRequest.getContextPath()}"/>
+</head>
+
+
+<a name="top"></a>
+
+<form th:action="@{/add-new-thread}" th:object="${message}" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="section_id" th:value="${section_id}" id="section_id">
+    <table class="post-form-table">
+        <tbody>
+        <tr>
+            <td class = "field-label">Name</td>
+            <td>
+                <input type="text" th:field="*{username}" name="username" placeholder="Anonymous" >
+            </td>
+        </tr>
+        <tr>
+            <td class = "field-label">Title</td>
+            <td>
+                <input th:field="*{title}" type="text" name="title">
+                <input type="submit" value="Post">
+            </td>
+        </tr>
+        <tr>
+            <td class = "field-label">Comment</td>
+            <td>
+                <textarea th:field="*{text}" name="text" cols="60" rows="9" wrap="soft"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class = "field-label">File</td>
+            <td>
+                <input type="file" name="file" accept="/image/*" style="color: white">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+
+<hr color="red">
+
+<div class="thread" th:each="group: ${groups}">
+
+    <span>
+        [
+        <a th:href="@{'/one-thread?id=' + ${group.id}}">Go to the thread</a>
+        ]
+    </span>
+
+    <article class="glass" th:each="message: ${group.messages}">
+        <header class="spaced">
+            <b><span th:text = "${message.username}"></span></b>
+            <time th:text="${message.message_date}"></time>
+            <nav class = "message_num">No.<span th:text="${message.number}"></span></nav>
+        </header>
+        <header class="spaced">
+            <span class="message_title"><i th:text = "${message.title}"></i></span>
+        </header>
+        <div class="post-container">
+            <figure th:unless="${message.image == null}">
+                <a target="_blank" th:href="@{'/saved_images/' + ${message.image.filename}}" >
+                    <img th:src="@{'/saved_images/' + ${message.image.filename}}">
+                </a>
+            </figure>
+            <blockquote th:utext="${message.text}"></blockquote>
+        </div>
+    </article>
+
+    <hr color="red">
+
+</div>
+
+<span>
+    [<a href="/">Main Page</a>]
+</span>
+
+<span>
+    [<a href="#top">Top</a>]
+</span>
+
+<span>
+    [<a href="javascript:location.reload(true)">Update</a>]
+</span>
+
+
+</body>
+</html>

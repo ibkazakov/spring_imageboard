@@ -1,0 +1,145 @@
+div.box-inner {
+    color: rgb(136, 0, 0);
+    display: block;
+    font-family: arial, helvetica, clean, sans-serif;
+    font-size: 13px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+
+    line-height: 16.003px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: left;
+
+}
+
+div.box-bar {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(255, 204, 170);
+    background-image: none;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+
+    background-size: auto;
+    color: rgb(136, 0, 0);
+    display: block;
+    font-family: arial, helvetica, clean, sans-serif;
+    font-size: 13px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 6.5px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: relative;
+    text-align: left;
+    width: 741.5px;
+    zoom: 1;
+}
+
+div.box-content {
+    color: rgb(136, 0, 0);
+    display: block;
+    font-family: arial, helvetica, clean, sans-serif;
+    font-size: 12.09px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    height: 271px;
+    line-height: 15.717px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 6.045px;
+    padding-right: 6.045px;
+    padding-top: 3.0225px;
+    text-align: left;
+    width: 735.938px;
+}
+
+div.column {
+
+    color: rgb(136, 0, 0);
+    display: block;
+    float: left;
+    font-family: arial, helvetica, clean, sans-serif;
+    font-size: 12.09px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    height: 225px;
+    line-height: 15.717px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: left;
+    width: 145.078px;
+}
+
+div.column a {
+    color: rgb(136, 0, 0);
+    cursor: pointer;
+    display: inline;
+    font-family: arial, helvetica, clean, sans-serif;
+    font-size: 12.09px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    height: auto;
+    line-height: 15.717px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    text-align: left;
+    text-decoration-color: rgb(136, 0, 0);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    width: auto;
+}
+
+div.column li {
+    list-style: none;
+}

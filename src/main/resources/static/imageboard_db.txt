@@ -1,0 +1,5 @@
+drop table if exists message
+drop table if exists message_group
+create table message (id bigint not null auto_increment, message_date datetime, text varchar(255), title varchar(255), group_id bigint, primary key (id))
+create table message_group (id bigint not null auto_increment, group_date datetime, title varchar(255), primary key (id))
+alter table message add constraint FKrr9dhuciaeg0e74ots5hjom8a foreign key (group_id) references message_group (id)
